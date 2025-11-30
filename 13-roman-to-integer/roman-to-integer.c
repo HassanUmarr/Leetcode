@@ -1,5 +1,5 @@
 int romanToInt(char* s) {
-    
+// map roman numeral to the values
     int value(char c) {
         switch (c) {
             case 'I': return 1;
@@ -19,10 +19,10 @@ int romanToInt(char* s) {
     while (s[i] != '\0') {
         int curr = value(s[i]);
         int next = value(s[i + 1]);
-
+// subtractive case
         if (next > curr) {
             total += (next - curr);
-            i += 2;  
+            i += 2;  // skip the next char 
         } else {
             total += curr;
             i++;
