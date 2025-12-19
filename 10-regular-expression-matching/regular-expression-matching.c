@@ -17,7 +17,6 @@ bool isMatch(char* s, char* p) {
     for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= m; j++) {
             if (p[j - 1] == '*') {
-                // zero occurrences of the preceding element
                 dp[i][j] = dp[i][j - 2];
                 char prev = p[j - 2];
                 if (prev == '.' || prev == s[i - 1]) {
