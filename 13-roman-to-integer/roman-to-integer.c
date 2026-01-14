@@ -12,7 +12,7 @@ int romanToInt(char* s) {
         }
         return 0; 
     }
-
+//
     int total = 0;
     int i = 0;
 
@@ -22,7 +22,7 @@ int romanToInt(char* s) {
 // subtractive case
         if (next > curr) {
             total += (next - curr);
-            i += 2;  // skip the next char 
+            i +=2;
         } else {
             total += curr;
             i++;
